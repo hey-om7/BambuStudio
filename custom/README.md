@@ -39,8 +39,7 @@ Click **Set URL** on the card, e.g. `http://192.168.1.50/sensor` or
 ## Pulling upstream updates
 
 ```sh
-git remote add upstream https://github.com/bambulab/BambuStudio.git   # once
-git fetch upstream
+git fetch upstream               # remote "upstream" = bambulab/BambuStudio
 git merge upstream/master        # or: git rebase upstream/master
 ```
 

@@ -833,6 +833,8 @@ endif ()
 # which pushes a static libslic3r_gui.lib past the 4 GB .lib format limit
 # (LNK1248). An OBJECT library hands the objects straight to the linker and
 # never produces that archive.
+include(${CMAKE_CURRENT_SOURCE_DIR}/GUI/ChamberSensor/ChamberSensor.cmake) # custom: ESP32 chamber sensor
+
 if (MSVC AND CMAKE_GENERATOR MATCHES "Ninja")
     add_library(libslic3r_gui OBJECT ${SLIC3R_GUI_SOURCES})
 else ()

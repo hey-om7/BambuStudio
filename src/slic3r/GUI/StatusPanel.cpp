@@ -1,4 +1,5 @@
 #include "StatusPanel.hpp"
+#include "ChamberSensor/ChamberSensorPanel.hpp" // custom: ESP32 chamber sensor
 
 #include <algorithm>
 
@@ -2950,6 +2951,8 @@ wxBoxSizer *StatusBasePanel::create_temp_control(wxWindow *parent)
     m_tempCtrl_chamber->SetTextColor(tempinput_text_colour);
     m_tempCtrl_chamber->SetBorderColor(tempinput_border_colour);
     sizer->Add(m_tempCtrl_chamber, 0, wxEXPAND | wxALL, 1);
+
+    sizer->Add(new ChamberSensor::ChamberSensorPanel(parent), 0, wxEXPAND | wxTOP, FromDIP(4)); // custom: ESP32 chamber sensor
 
     m_misc_ctrl_sizer = create_misc_control(parent);
     sizer->Add(m_misc_ctrl_sizer, 0, wxEXPAND, 0);

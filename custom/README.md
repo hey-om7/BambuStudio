@@ -39,8 +39,8 @@ Click **Set URL** on the card, e.g. `http://192.168.1.50/sensor` or
 ## Pulling upstream updates
 
 ```sh
-git fetch upstream               # remote "upstream" = bambulab/BambuStudio
-git merge upstream/master        # or: git rebase upstream/master
+git fetch heyom-sensors          # remote "heyom-sensors" = bambulab/BambuStudio
+git merge heyom-sensors/master   # or: git rebase heyom-sensors/master
 ```
 
 If upstream changes the lines around the hooks, re-add the three tagged lines.
